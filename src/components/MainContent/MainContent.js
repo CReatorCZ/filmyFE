@@ -74,5 +74,5 @@ function MainContent({changeSearchedWord}) {
         </div>
     )
 }
-
+//sss
 export default MainContent;
