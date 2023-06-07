@@ -1,0 +1,67 @@
+
+form {
+    margin: 20px;
+    position: relative;
+    width: 440px;
+    height: 528px;
+    box-shadow: 0 10px 20px 5px black;
+}
+
+form div input {
+    width: 250px;
+    height: 30px;
+    font-size: large;
+}
+
+form div:nth-child(1) {
+    padding-top: 10px;
+}
+
+form div {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+form div label {
+    font-size: larger;
+    font-weight: bold;
+    display: inline-block;
+    width: 150px;
+}
+
+form div textarea {
+    width: 400px;
+    resize: none;
+    height: 160px;
+    font-size: 14px;
+}
+
+#buttons {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#buttons button {
+    height: 40px;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#submit:hover {
+    background-color: #23e424;
+    transition: 700ms;
+    border-radius: 10px;
+}
+
+#delete:hover {
+    background-color: #e42c38;
+    transition: 700ms;
+    border-radius: 10px;
+}
+
+

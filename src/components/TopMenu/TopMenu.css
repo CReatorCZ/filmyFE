@@ -1,0 +1,41 @@
+.TopNav {
+    background-color: #6184a8;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+    font-weight: bold;
+    text-align: center;
+}
+
+.TopNav a {
+    font-size: x-large;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+
+}
+
+.TopNav a:hover {
+    color: yellow;
+}
+
+.TopNav a:nth-child(2) {
+
+}
+
+:any-link {
+    color: black;
+}
+
+
+.TopNav input {
+    width: 250px;
+    height: 30px;
+    border: 0;
+    border-radius: 2px;
+
+}
