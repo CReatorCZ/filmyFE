@@ -32,7 +32,7 @@ function MainContent({changeSearchedWord}) {
         };
         fetchData();
         console.log("loaded data")
-    }, [])
+    }, [url])
 
     console.log("data from Api:", data)
 
