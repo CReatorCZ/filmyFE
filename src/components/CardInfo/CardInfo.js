@@ -19,6 +19,7 @@ function CardInfo() {
         const fetchData = () => {             /*-------PROMISE-------*/
             axios.get("http://localhost/film/" + id)
                 .then(response => {
+                    console.log("----------VYPISUJU")
                     setFilm(response.data.find((item) => item.id === Number(id)))
                 })
                 .catch(error => {
@@ -79,8 +80,6 @@ function CardInfo() {
         console.log("submited data: ", event)
 
         updateFilm(event)
-
-        // navigate("/")
 
     }
 
