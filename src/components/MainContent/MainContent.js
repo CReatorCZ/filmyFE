@@ -7,10 +7,10 @@ import ReactPaginate from "react-paginate";
 
 function MainContent({changeSearchedWord}) {
     console.log("searchedWord", changeSearchedWord)
-    const limit = 5;
+    const limit = 6;
     const [data, setData] = useState()
     const [totalCount, setTotalCount] = useState(0)
-    const pageCount = data ? Math.ceil(totalCount / 5) : 0
+    const pageCount = data ? Math.ceil(totalCount / limit) : 0
     const [currentPage, setCurrentPage] = useState(0)
     const offset = currentPage * limit;
     const url = `http://localhost/films/?limit=${limit}&offset=${offset}&search=${changeSearchedWord}`
@@ -32,6 +32,8 @@ function MainContent({changeSearchedWord}) {
         };
         fetchData();
         console.log("loaded data")
+
+
     }, [url])
 
     console.log("data from Api:", data)
@@ -68,9 +70,6 @@ function MainContent({changeSearchedWord}) {
 
                 />
             </div>}
-            <div className={"block"}>
-                oooo
-            </div>
         </div>
     )
 }
