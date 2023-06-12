@@ -5,15 +5,15 @@ import axios from "axios";
 import Loading from "../Loading/Loading";
 import ReactPaginate from "react-paginate";
 
-function MainContent({changeSearchedWord}) {
-    console.log("searchedWord", changeSearchedWord)
-    const limit = 6;
+function MainContent({searchedWord}) {
+    console.log("searchedWord", searchedWord)
+    const limit = 5;
     const [data, setData] = useState()
     const [totalCount, setTotalCount] = useState(0)
     const pageCount = data ? Math.ceil(totalCount / limit) : 0
     const [currentPage, setCurrentPage] = useState(0)
     const offset = currentPage * limit;
-    const url = `http://localhost/films/?limit=${limit}&offset=${offset}&search=${changeSearchedWord}`
+    const url = `http://localhost/films/?limit=${limit}&offset=${offset}&search=${searchedWord}`
 
 
     useEffect(() => {
@@ -32,7 +32,6 @@ function MainContent({changeSearchedWord}) {
         };
         fetchData();
         console.log("loaded data")
-
 
     }, [url])
 

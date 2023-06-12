@@ -22,7 +22,7 @@ function App() {
 
 
             <Routes>
-                <Route exact path={"/"} element={<MainContent changeSearchedWord={searchedWord}/>}/>
+                <Route exact path={"/"} element={<MainContent searchedWord={searchedWord}/>}/>
                 <Route path={"/film/:id"} element={<CardInfo/>}/>
                 <Route path={"/film/add"} element={<CardNew/>}/>
             </Routes>
