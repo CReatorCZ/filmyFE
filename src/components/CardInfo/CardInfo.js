@@ -16,7 +16,8 @@ function CardInfo() {
 
 
     useEffect(() => {
-        const fetchData = () => {             /*-------PROMISE-------*/
+        console.log("začátek useEffectu")
+        const fetchData = () => {
             axios.get("http://localhost/film/" + id)
                 .then(response => {
                     console.log("----------VYPISUJU")
@@ -27,6 +28,9 @@ function CardInfo() {
                 });
         };
         fetchData();
+        return () => {
+            console.log("konec useEffectu")
+        }
     }, [id])
 
 
