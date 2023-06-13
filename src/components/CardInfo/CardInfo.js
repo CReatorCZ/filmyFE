@@ -1,10 +1,10 @@
 import {useNavigate, useParams} from "react-router-dom";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {Form} from "react-final-form";
 import InputField from "../Inputs/InputField";
 import TextareaField from "../Inputs/TextareaInput";
-import "./CardInfo.css"
+import "./CardInfo.css";
 
 function CardInfo() {
     const {id} = useParams()
@@ -76,7 +76,6 @@ function CardInfo() {
                 navigate("/")
             }
         }
-
     }
 
     const onSubmit = (event) => {
@@ -105,6 +104,10 @@ function CardInfo() {
                                                autocomplete={"on"}
                                                label={"Režie"}
                                                placeholder={film.direction}/>
+                                   {/*<InputField name={"actors"}*/}
+                                   {/*            autocomplete={"on"}*/}
+                                   {/*            label={"Herci"}*/}
+                                   {/*            placeholder={film.actors[1].firstName+" "+film.actors[1].lastName}/>*/}
                                    <InputField name={"releaseDate"}
                                                autocomplete={"on"}
                                                label={"Datum vydání"}
@@ -124,6 +127,10 @@ function CardInfo() {
                                    <TextareaField name={"description"}
                                                   label={"Popis filmu"}
                                                   placeholder={film.description}/>
+                                   <div>
+                                       <label>Herci</label>
+                                       <p>{film.actors.map(actor => `${actor.firstName} ${actor.lastName}`).join(', ')}</p>
+                                   </div>
                                    <div id={"buttons"}>
                                        <button type={"submit"} id={"submit"}>Uložit Změny</button>
                                        <button type={"button"} id={"delete"} onClick={deleteFilm}>Odstranit film
