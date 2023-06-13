@@ -37,5 +37,42 @@
     height: 30px;
     border: 0;
     border-radius: 2px;
+    font-size: large;
+}
 
+.halfCircle {
+    background-color: #6184a8;
+    height: 30px;
+    width: 60px;
+    border-radius: 0 0 30px 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#addSearchIcon {
+
+}
+
+.additionalSearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    height: 40px;
+    background-color: #6184a8;
+    color: white;
+    border-radius: 0 0 20px 20px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.additionalSearchBar input {
+    width: 250px;
+    height: 25px;
+    font-size: medium;
+}
+
+.additionalSearchBar input, .additionalSearchBar label {
+    /*background-color: #23e424;*/
+    margin: 0 15px;
 }
