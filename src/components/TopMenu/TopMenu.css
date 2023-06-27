@@ -9,36 +9,59 @@
     text-align: center;
 }
 
-.TopNav a {
+.TopNav nav a {
     font-size: x-large;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 1px 20px;
     text-decoration: none;
     cursor: pointer;
     color: white;
-
 }
+
+.logoBar a {
+    font-size: medium;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
 
 .TopNav a:hover {
     color: yellow;
-}
-
-.TopNav a:nth-child(2) {
-
 }
 
 :any-link {
     color: black;
 }
 
-
-.TopNav input {
-    width: 250px;
-    height: 30px;
-    border: 0;
-    border-radius: 2px;
-    font-size: large;
+.logoBar {
+    background-color: #6184a8;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 2px auto;
 }
+
+.logoBar div:not(:first-child) {
+    margin-left: 20px;
+}
+
+#LOGO {
+    width: 250px;
+    height: 40px;
+}
+
+#LOGO a {
+    font-size: 30px;
+}
+
+/*.TopNav input {*/
+/*    width: 250px;*/
+/*    height: 30px;*/
+/*    border: 0;*/
+/*    border-radius: 2px;*/
+/*    font-size: large;*/
+/*}*/
 
 .halfCircle {
     background-color: #6184a8;
@@ -47,10 +70,6 @@
     border-radius: 0 0 30px 30px;
     text-align: center;
     cursor: pointer;
-}
-
-#addSearchIcon {
-
 }
 
 .additionalSearchBar {
@@ -66,13 +85,41 @@
     font-weight: bold;
 }
 
-.additionalSearchBar input {
-    width: 250px;
-    height: 25px;
-    font-size: medium;
+
+/*** searchBar ****/
+.searchContainer {
+    position: relative;
+    display: inline-block;
 }
 
-.additionalSearchBar input, .additionalSearchBar label {
-    /*background-color: #23e424;*/
-    margin: 0 15px;
+#searchBar {
+    padding-right: 40px;
+    height: 36px;
+    width: 250px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    padding-left: 8px;
+}
+
+#searchButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchButton svg {
+    fill: #555555;
+    width: 25px;
+    height: 25px;
 }
