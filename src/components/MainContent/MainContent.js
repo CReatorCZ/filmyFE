@@ -17,7 +17,6 @@ function MainContent({searchedWord, searchedActor}) {
 
 
     useEffect(() => {
-        console.log("loading data")
         const fetchData = () => {
             console.log("url for GET: ", url)
             axios.get(url)
@@ -31,8 +30,6 @@ function MainContent({searchedWord, searchedActor}) {
                 });
         };
         fetchData();
-        console.log("loaded data")
-
     }, [url])
 
     console.log("data from Api:", data)
