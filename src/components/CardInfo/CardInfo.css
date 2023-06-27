@@ -7,6 +7,10 @@ form {
     box-shadow: 0 10px 20px 5px black;
 }
 
+#CardInfo {
+    margin-top: 40px;
+}
+
 form div input {
     width: 250px;
     height: 30px;
