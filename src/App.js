@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import CardInfo from "./components/CardInfo/CardInfo";
 import CardNew from "./components/CardNew/CardNew";
 import {useState} from "react";
+import Filter from "./components/Filter/Filter"
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
                 />}/>
                 <Route path={"/film/:id"} element={<CardInfo/>}/>
                 <Route path={"/film/add"} element={<CardNew/>}/>
+                <Route path={"/filter"} element={<Filter/>}/>
             </Routes>
         </BrowserRouter>
     );
