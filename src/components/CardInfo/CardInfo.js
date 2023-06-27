@@ -20,7 +20,6 @@ function CardInfo() {
         const fetchData = () => {
             axios.get("http://localhost/film/" + id)
                 .then(response => {
-                    console.log("----------VYPISUJU")
                     setFilm(response.data.find((item) => item.id === Number(id)))
                 })
                 .catch(error => {
@@ -88,7 +87,7 @@ function CardInfo() {
 
 
     return (
-        <div>
+        <div id={"CardInfo"}>
             {film ? (<Form onSubmit={onSubmit}
                            render={({handleSubmit}) => (
                                <form onSubmit={handleSubmit}>
