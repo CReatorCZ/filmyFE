@@ -90,7 +90,7 @@ function CardInfo() {
         <div id={"CardInfo"}>
             {film ? (<Form onSubmit={onSubmit}
                            render={({handleSubmit}) => (
-                               <form onSubmit={handleSubmit}>
+                               <form onSubmit={handleSubmit} id={"form"}>
                                    <InputField name={"name"}
                                                autocomplete={"on"}
                                                label={"Název filmu"}

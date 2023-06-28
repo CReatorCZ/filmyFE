@@ -1,5 +1,5 @@
 
-form {
+#form {
     margin: 20px;
     position: relative;
     width: 440px;
@@ -11,29 +11,29 @@ form {
     margin-top: 40px;
 }
 
-form div input {
+#form div input {
     width: 250px;
     height: 30px;
     font-size: large;
 }
 
-form div:nth-child(1) {
+#form div:nth-child(1) {
     padding-top: 10px;
 }
 
-form div {
+#form div {
     margin-top: 5px;
     margin-left: 10px;
 }
 
-form div label {
+#form div label {
     font-size: larger;
     font-weight: bold;
     display: inline-block;
     width: 150px;
 }
 
-form div textarea {
+#form div textarea {
     width: 400px;
     resize: none;
     height: 160px;
